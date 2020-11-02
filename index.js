@@ -57,9 +57,7 @@ exports.register = function () {
 		plugin.register_hook('send_email', 'sending_email');
 		plugin.register_hook('get_mx', 'getting_mx');
 		plugin.register_hook('deferred', 'deferred_email');
-		plugin.register_hook('bounce', '
-				     
-				     _email');
+		plugin.register_hook('bounce', '_email');
 		plugin.register_hook('delivered', 'save_results_to_mongodb');
 	}
 };
