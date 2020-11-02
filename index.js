@@ -57,7 +57,9 @@ exports.register = function () {
 		plugin.register_hook('send_email', 'sending_email');
 		plugin.register_hook('get_mx', 'getting_mx');
 		plugin.register_hook('deferred', 'deferred_email');
-		plugin.register_hook('bounce', 'bounced_email');
+		plugin.register_hook('bounce', '
+				     
+				     _email');
 		plugin.register_hook('delivered', 'save_results_to_mongodb');
 	}
 };
@@ -457,6 +459,7 @@ exports.deferred_email = function(next, hmail, deferred_object) {
 
 // BOUNCE
 exports.bounced_email = function(next, hmail, error) {
+	console.log(hmail):
 	// Make sure we have a message_id. If not do not send anything
 	if ( ! hmail.todo.notes.message_id ) return next();
 	// Vars
