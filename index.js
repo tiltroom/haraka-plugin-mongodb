@@ -457,7 +457,7 @@ exports.deferred_email = function(next, hmail, deferred_object) {
 
 // BOUNCE
 exports.bounced_email = function(next, hmail, error) {
-	console.log(hmail)
+	plugin.lognotice(hmail)
 	// Make sure we have a message_id. If not do not send anything
 	if ( ! hmail.todo.notes.message_id ) return next();
 	// Vars
